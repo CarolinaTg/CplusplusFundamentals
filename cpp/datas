@@ -1,0 +1,121 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+// Definición de estructuras
+struct BasicData {
+    string completeName;
+    string address;
+    string email;
+    int age;
+    string numID;
+    string DNI;
+    string phone;
+    string bornDate;
+};
+
+struct EmploymentDetails {
+    string dateHire;
+    string department;
+    string internalId;
+    double currentSalary;
+    string position;
+    string contractType;
+};
+
+struct AdditionalInformation {
+    string maritalStatus;
+    string educationLevel;
+    int numOfChildren;
+    int languagesSpoken;
+};
+
+// Funciones para ingresar datos
+void ingresarBasicData(BasicData &bd) {
+    cout << "Ingrese nombre completo: ";
+    getline(cin, bd.completeName);
+    cout << "Ingrese dirección: ";
+    getline(cin, bd.address);
+    cout << "Ingrese email: ";
+    getline(cin, bd.email);
+    cout << "Ingrese edad: ";
+    cin >> bd.age;
+    cin.ignore(); // limpiar buffer
+    cout << "Ingrese número de ID: ";
+    getline(cin, bd.numID);
+    cout << "Ingrese DNI: ";
+    getline(cin, bd.DNI);
+    cout << "Ingrese teléfono: ";
+    getline(cin, bd.phone);
+    cout << "Ingrese fecha de nacimiento (dd/mm/aaaa): ";
+    getline(cin, bd.bornDate);
+}
+
+void ingresarEmploymentDetails(EmploymentDetails &ed) {
+    cout << "Ingrese fecha de ingreso (dd/mm/aaaa): ";
+    getline(cin, ed.dateHire);
+    cout << "Ingrese departamento: ";
+    getline(cin, ed.department);
+    cout << "Ingrese ID interno: ";
+    getline(cin, ed.internalId);
+    cout << "Ingrese salario actual: ";
+    cin >> ed.currentSalary;
+    cin.ignore(); // limpiar buffer
+    cout << "Ingrese cargo: ";
+    getline(cin, ed.position);
+    cout << "Ingrese tipo de contrato: ";
+    getline(cin, ed.contractType);
+}
+
+void ingresarAdditionalInfo(AdditionalInformation &ai) {
+    cout << "Estado civil: ";
+    getline(cin, ai.maritalStatus);
+    cout << "Nivel de educación: ";
+    getline(cin, ai.educationLevel);
+    cout << "Número de hijos: ";
+    cin >> ai.numOfChildren;
+    cout << "Cantidad de idiomas hablados: ";
+    cin >> ai.languagesSpoken;
+    cin.ignore(); // limpiar buffer
+}
+
+int main() {
+    BasicData personaBasic;
+    EmploymentDetails empleado;
+    AdditionalInformation info;
+
+    // Ingreso de datos
+    cout << "--- Datos Básicos ---" << endl;
+    ingresarBasicData(personaBasic);
+
+    cout << "\n--- Datos de Empleo ---" << endl;
+    ingresarEmploymentDetails(empleado);
+
+    cout << "\n--- Información Adicional ---" << endl;
+    ingresarAdditionalInfo(info);
+
+    // Mostrar los datos ingresados
+    cout << "\n\n--- Datos Ingresados ---" << endl;
+    cout << "Nombre completo: " << personaBasic.completeName << endl;
+    cout << "Dirección: " << personaBasic.address << endl;
+    cout << "Email: " << personaBasic.email << endl;
+    cout << "Edad: " << personaBasic.age << endl;
+    cout << "N° ID: " << personaBasic.numID << endl;
+    cout << "DNI: " << personaBasic.DNI << endl;
+    cout << "Teléfono: " << personaBasic.phone << endl;
+    cout << "Fecha de nacimiento: " << personaBasic.bornDate << endl;
+
+    cout << "\nFecha de ingreso: " << empleado.dateHire << endl;
+    cout << "Departamento: " << empleado.department << endl;
+    cout << "ID interno: " << empleado.internalId << endl;
+    cout << "Salario: " << empleado.currentSalary << endl;
+    cout << "Cargo: " << empleado.position << endl;
+    cout << "Tipo de contrato: " << empleado.contractType << endl;
+
+    cout << "\nEstado civil: " << info.maritalStatus << endl;
+    cout << "Nivel de educación: " << info.educationLevel << endl;
+    cout << "Número de hijos: " << info.numOfChildren << endl;
+    cout << "Idiomas hablados: " << info.languagesSpoken << endl;
+
+    return 0;
+}
