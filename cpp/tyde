@@ -1,0 +1,18 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+typedef std:: string text_t;
+typedef int number_t;
+
+int main () {
+    
+    text_t  nameperson = "carolina";
+    number_t ageperson = 24;
+    
+    cout<< nameperson<< '\n';
+    cout<<ageperson<< '\n';
+    
+    return 0;
+}
