@@ -1,0 +1,26 @@
+#include
+
+int main() {
+int students = 20;
+
+// Operadores básicos
+students = students + 1;  // 21
+students += 1;            // 22
+students++;               // 23 (Incremento)
+
+students = students - 1;  // 22
+students -= 1;            // 21
+students--;               // 20 (Decremento)
+
+students *= 2;            // 40 (Multiplicación)
+students /= 2;            // 20 (División)
+
+// Módulo
+int remainder = students % 3; // 20 % 3 = 2
+
+// Precedencia de operadores
+students = 6 - 5 + 4 * 3 / 2; // (4 * 3) / 2 = 6; 6 - 5 + 6 = 7
+
+std::cout << students;
+return 0;
+}
