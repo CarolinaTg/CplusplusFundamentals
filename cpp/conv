@@ -1,0 +1,15 @@
+include <iostream>
+
+int main () {
+
+int x = 3.14;
+std::cout << x << '\n';
+
+double y = (int)3.14;
+std::cout << y << '\n';
+
+char a = 100;
+std::cout << a << '\n';
+
+return 0;
+}
